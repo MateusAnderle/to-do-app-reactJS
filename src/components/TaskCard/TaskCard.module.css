@@ -1,0 +1,38 @@
+.contentBox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: var(--gray-500);
+    justify-content: space-between;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 0.75rem;
+}
+
+.checkboxStyle {
+    padding: 0 0.6rem;
+}
+
+.taskContent {
+    color: var(--gray-100);
+    flex: 1;
+    margin: 0 1rem;
+    text-align: justify;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.875rem;
+    line-height: 1.4;
+}
+
+.imageStyle {
+    height: 1rem;
+    padding: 0 0.6rem;
+    cursor: pointer;
+}
+
+.imageWrapper {
+    background: var(--gray-500);
+    border: none;
+    align-items: center;
+    justify-content: center;   
+    cursor: pointer;
+}

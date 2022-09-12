@@ -1,0 +1,110 @@
+body {
+    padding: 0;
+    margin: 0;  
+}
+
+.container {
+    display: flex;
+    flex-flow: column;
+    height: 100vh;
+}
+
+.containerHeader {
+    display: flex;
+    justify-content: center;
+    background: var(--gray-700);
+}
+
+.imageLogo {
+    margin: 4rem 0;
+    width: 8rem;
+}
+
+.mainContainer {
+    display: flex;
+    flex-grow: 1;
+    background: var(--gray-600);
+    justify-content: center;
+}
+
+.tasksWrapper {
+    width: 50rem;
+}
+
+.inputContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: -1.7rem;
+}
+
+.inputContent {
+    flex: 1;
+    margin-right: 0.5rem;
+    border-radius: 8px;
+    height: 20px;
+    color: var(--gray-100);
+    background: var(--gray-400);
+    border: 1px solid var(--gray-700);
+    padding: 1rem;
+    font-size: 1rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    resize: none;
+}
+
+.inputContent:focus{
+    outline: none;
+}
+
+.inputButton {
+    width: 90px;
+    height: 50px;
+    border-radius: 8px;
+    color: var(--gray-100);
+    background: var(--blue-500);
+    border: none;
+    font-size: 0.875rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+}
+
+.inputButton:active {
+    background: var(--blue-300);
+}
+
+.tasksHeader {
+    display: flex;
+    justify-content: space-between;
+    margin: 4rem 0;
+    padding-bottom: 1.5rem;
+    border-bottom-width: 2px;
+    border-bottom-color: var(--gray-400);
+    border-bottom-style: solid;
+}
+
+.createdTasks {
+    font-size: 0.875rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    color: var(--blue-300);
+}
+
+.finishedTasks {
+    font-size: 0.875rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    color: var(--purple-300);
+}
+
+.tasksCounter {
+    background-color: var(--gray-400);
+    color: var(--gray-200);
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    margin-left: 8px;
+    padding: 2px 8px;
+    border-radius: 10px;
+}

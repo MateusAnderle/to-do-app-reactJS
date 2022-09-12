@@ -1,0 +1,27 @@
+.tasksContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.clipboardStyle {
+    height: 56px;
+    width: 56px;
+    margin-bottom: 16px;
+}
+
+.clipboardBold {
+    font-size: 1rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    color: var(--gray-300);
+    line-height: 1.4;
+}
+
+.clipboardRegular {
+    font-size: 1rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: regular;
+    color: var(--gray-300);
+    line-height: 1.4;
+}
