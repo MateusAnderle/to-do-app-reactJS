@@ -7,6 +7,7 @@ import { TaskCard } from '../components/TaskCard';
 export function Home() {
   const [task, setTask] = useState([]);
   const [inputTask, setInputTask] = useState('');
+  const [finished, setFinished] = useState([]);
 
   function handleTextTask(event){
     event.target.setCustomValidity('');
@@ -24,6 +25,10 @@ export function Home() {
       return task !== taskToDelete;
     })
     setTask(tasksWithoutDeletedOne);
+  }
+
+  function handleCountChecks(check){
+    console.log(check);
   }
 
     return (
@@ -51,11 +56,11 @@ export function Home() {
 
             <div className={styles.tasksHeader}>
               <div className={styles.createdTasks}>Tarefas Criadas <span className={styles.tasksCounter}> {task.length} </span> </div>
-              <div className={styles.finishedTasks}>Concluídas <span className={styles.tasksCounter}> 5 de 15 </span> </div>
+              <div className={styles.finishedTasks}>Concluídas <span className={styles.tasksCounter}> {task.length} </span> </div>
             </div>
             
-            { task ? task.map(task => {
-              return <TaskCard key={task} title={task} onClick={() => handleRemoveTask(task)}/>
+            { task.length ? task.map(task => {
+              return <TaskCard key={task} title={task} onClick={() => handleRemoveTask(task)} getChecked={handleCountChecks}/>
             }) : <EmptyList/>} 
 
           </div>
