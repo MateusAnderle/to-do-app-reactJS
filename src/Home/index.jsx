@@ -27,10 +27,6 @@ export function Home() {
     setTask(tasksWithoutDeletedOne);
   }
 
-  function handleCountChecks(check){
-    console.log(check);
-  }
-
     return (
       <div className={styles.container}>
         <header className={styles.containerHeader}>
@@ -60,7 +56,7 @@ export function Home() {
             </div>
             
             { task.length ? task.map(task => {
-              return <TaskCard key={task} title={task} onClick={() => handleRemoveTask(task)} getChecked={handleCountChecks}/>
+              return <TaskCard key={task} title={task} onClick={() => handleRemoveTask(task)}/>
             }) : <EmptyList/>} 
 
           </div>

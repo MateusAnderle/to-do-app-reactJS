@@ -2,7 +2,7 @@ import styles from './TaskCard.module.css';
 import { Trash } from 'phosphor-react';
 import { useState } from 'react';
 
-export function TaskCard({ title, onClick, getChecked }){
+export function TaskCard({ title, onClick }){
     const [isChecked, setIsChecked] = useState(false);
 
     function handleOnChange () {
@@ -16,7 +16,6 @@ export function TaskCard({ title, onClick, getChecked }){
                     name="checkbox"
                     checked={isChecked}
                     onChange={handleOnChange}
-                    onClick={() => getChecked(isChecked)}
                 />
             <div className={styles.taskContent} style={isChecked ? {textDecoration: "line-through"} : {textDecoration: "none"}}>{title}</div>
             <button onClick={onClick} className={styles.imageWrapper} title='Deletar tarefa'>
